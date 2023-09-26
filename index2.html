@@ -1,0 +1,1293 @@
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        @media only screen and (max-width: 650px) {
+            .body {
+                grid-template-rows: 0% 50% 120% 70% 110% 90%;
+            }
+            .body .intro p {
+                font-size: 11px;
+            }
+            .body .intro .btnin {
+                width: 25vw;
+                height: 7vh;
+                align-self: center;
+            }
+            .body .services {
+                display: grid;
+                grid-auto-flow: row;
+                grid-template-rows: 0.5fr 2fr 2fr 2fr;
+            }
+            .body .services div {
+                width: 60vw;
+                height: 30vh;
+            }
+            .body .services>h1 {
+                font-weight: 900;
+                text-align: center;
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            .body .services div p {
+                padding-right: 5vw;
+                padding-left: 5vw;
+                padding-bottom: 5vh;
+                font-size: 13px;
+            }
+            .body .services div:nth-child(2) {
+                background: rgb(236, 203, 255);
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            .body .services div:nth-child(3) {
+                background: rgb(255, 187, 187);
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            .body .services div:nth-child(4) {
+                background: rgb(139, 255, 158);
+                grid-column: 1/2;
+                grid-row: 4/5;
+                margin-bottom: vh;
+            }
+            img {
+                width: 20vw;
+            }
+            .body .clients .logos {
+                grid-auto-flow: row;
+                grid-template-rows: repeat(3, 1fr);
+                width: 100%;
+                justify-self: center;
+            }
+            .body form div label {
+                margin-top: 8vh;
+                margin-bottom: 5vh;
+            }
+            .body form div input {
+                font-size: 15px;
+            }
+            .expand {
+                height: 5vh !important;
+            }
+            .body .footer {
+                grid-auto-flow: row;
+                grid-template-rows: 10% 40% 40% 10%;
+                grid-template-columns: repeat(2, 50%);
+            }
+            .body .footer .a {
+                align-items: end;
+                grid-column: 1/2;
+                justify-items: center;
+                text-align: left;
+                grid-row: 3/4;
+                width: 100%;
+            }
+            .body .footer .b {
+                grid-column: 2/-1;
+                justify-items: center;
+                grid-template-rows: repeat(5, 17%);
+                grid-row: 3/4;
+                align-items: end;
+            }
+            .body .footer a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 700;
+                color: rgba(0, 255, 255, 0.575);
+                letter-spacing: 2px;
+            }
+            .body .footer .cp {
+                grid-column: 2/-1;
+                grid-row: 4/5;
+                align-self: center;
+                justify-self: end;
+                margin-right: 4vw !important;
+                margin: 0;
+                padding: 0;
+            }
+            .body .footer .cp p {
+                font-size: 10px;
+            }
+            .body .footer a {
+                font-size: 15px;
+                letter-spacing: 2px;
+            }
+            .body .footer .q i {
+                font-size: 150px !important;
+            }
+            .body .footer .q {
+                grid-row: 1/3;
+                grid-column: 1/-1;
+                justify-self: center;
+                justify-items: center;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        
+        @media only screen and (max-width: 800px) and (min-width: 651px) {
+            .body {
+                grid-template-rows: 0% 50% 120% 50% 120% 90%;
+            }
+            .body .intro p {
+                font-size: 11px;
+            }
+            .body .intro .btnin {
+                width: 25vw;
+                height: 7vh;
+                align-self: center;
+            }
+            .body .services {
+                display: grid;
+                grid-auto-flow: row;
+                grid-template-rows: 0.5fr 2fr 2fr 2fr;
+            }
+            .body .services div {
+                width: 60vw;
+                height: 30vh;
+            }
+            .body .services>h1 {
+                font-weight: 900;
+                text-align: center;
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            .body .services div p {
+                padding-right: 5vw;
+                padding-left: 5vw;
+                padding-bottom: 5vh;
+                font-size: 13px;
+            }
+            .body .services div:nth-child(2) {
+                background: rgb(236, 203, 255);
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            .body .services div:nth-child(3) {
+                background: rgb(255, 187, 187);
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            .body .services div:nth-child(4) {
+                background: rgb(139, 255, 158);
+                grid-column: 1/2;
+                grid-row: 4/5;
+                margin-bottom: vh;
+            }
+            img {
+                width: 20vw;
+            }
+            .body .clients .logos {
+                grid-auto-flow: row;
+                grid-template-columns: repeat(3, 1fr);
+                width: 100%;
+                justify-self: center;
+                align-items: center;
+            }
+            .body form div label {
+                margin-top: 8vh;
+                margin-bottom: 5vh;
+            }
+            .body form div input {
+                width: 300px;
+                font-size: 15px;
+            }
+            .expand {
+                height: 5vh !important;
+            }
+            .body .footer {
+                grid-auto-flow: row;
+                grid-template-rows: 10% 40% 40% 10%;
+                grid-template-columns: repeat(2, 50%);
+            }
+            .body .footer .a {
+                align-items: end;
+                grid-column: 1/2;
+                justify-items: center;
+                text-align: left;
+                grid-row: 3/4;
+                width: 100%;
+            }
+            .body .footer .b {
+                grid-column: 2/-1;
+                justify-items: center;
+                grid-template-rows: repeat(5, 17%);
+                grid-row: 3/4;
+                align-items: end;
+            }
+            .body .footer a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 700;
+                color: rgba(0, 255, 255, 0.575);
+                letter-spacing: 2px;
+            }
+            .body .footer .cp {
+                grid-column: 2/-1;
+                grid-row: 4/5;
+                align-self: center;
+                justify-self: end;
+                margin-right: 4vw !important;
+                margin: 0;
+                padding: 0;
+            }
+            .body .footer .cp p {
+                font-size: 10px;
+            }
+            .body .footer a {
+                font-size: 15px;
+                letter-spacing: 2px;
+            }
+            .body .footer .q i {
+                font-size: 150px !important;
+            }
+            .body .footer .q {
+                grid-row: 1/3;
+                grid-column: 1/-1;
+                justify-self: center;
+                justify-items: center;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        
+        @media only screen and (max-width: 900px) and (min-width: 801px) {
+            .body {
+                grid-template-rows: 0% 50% 70% 50% 120% 90%;
+            }
+            .body .intro p {
+                font-size: 13px;
+            }
+            .body .intro .btnin {
+                width: 25vw;
+                height: 7vh;
+                align-self: center;
+            }
+            .body .services {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-rows: 0.5fr 2fr;
+                grid-template-columns: repeat(3, 1fr);
+                align-content: end;
+            }
+            .body .services div {
+                width: 85%;
+                height: 55%;
+                align-self: end;
+                margin-bottom: 10vh;
+            }
+            .body .services>h1 {
+                font-weight: 900;
+                text-align: center;
+                grid-column: 1/-1;
+                grid-row: 1/2;
+            }
+            .body .services div p {
+                padding-right: 5vw;
+                padding-left: 5vw;
+                padding-bottom: 5vh;
+                font-size: 13px;
+            }
+            .body .services div:nth-child(2) {
+                background: rgb(236, 203, 255);
+                grid-column: 1/2;
+                grid-row: 1/-1;
+            }
+            .body .services div:nth-child(3) {
+                background: rgb(255, 187, 187);
+                grid-column: 2/3;
+                grid-row: 1/-1;
+            }
+            .body .services div:nth-child(4) {
+                background: rgb(139, 255, 158);
+                grid-column: 3/4;
+                grid-row: 1/-1;
+            }
+            img {
+                width: 20vw;
+            }
+            .body .clients .logos {
+                grid-auto-flow: row;
+                grid-template-columns: repeat(3, 1fr);
+                width: 100%;
+                justify-self: center;
+                align-items: center;
+            }
+            .body form div label {
+                margin-top: 8vh;
+                margin-bottom: 5vh;
+            }
+            .body form div input {
+                width: 300px;
+                font-size: 15px;
+            }
+            .expand {
+                height: 5vh !important;
+            }
+            .body .footer {
+                grid-auto-flow: row;
+                grid-template-rows: 10% 40% 40% 10%;
+                grid-template-columns: repeat(2, 50%);
+            }
+            .body .footer .a {
+                align-items: end;
+                grid-column: 1/2;
+                justify-items: center;
+                text-align: left;
+                grid-row: 3/4;
+                width: 100%;
+            }
+            .body .footer .b {
+                grid-column: 2/-1;
+                justify-items: center;
+                grid-template-rows: repeat(5, 17%);
+                grid-row: 3/4;
+                align-items: end;
+            }
+            .body .footer a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 700;
+                color: rgba(0, 255, 255, 0.575);
+                letter-spacing: 2px;
+            }
+            .body .footer .cp {
+                grid-column: 2/-1;
+                grid-row: 4/5;
+                align-self: center;
+                justify-self: end;
+                margin-right: 4vw !important;
+                margin: 0;
+                padding: 0;
+            }
+            .body .footer .cp p {
+                font-size: 10px;
+            }
+            .body .footer a {
+                font-size: 15px;
+                letter-spacing: 2px;
+            }
+            .body .footer .q i {
+                font-size: 150px !important;
+            }
+            .body .footer .q {
+                grid-row: 1/3;
+                grid-column: 1/-1;
+                justify-self: center;
+                justify-items: center;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        
+        @media only screen and (max-width: 1100px) and (min-width: 901px) {
+            .body {
+                grid-template-rows: 0% 50% 70% 50% 120% 50%;
+            }
+            .body .intro p {
+                font-size: 13px;
+            }
+            .body .intro .btnin {
+                width: 25vw;
+                height: 7vh;
+                align-self: center;
+            }
+            .body .services {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-rows: 0.5fr 2fr;
+                grid-template-columns: repeat(3, 1fr);
+                align-content: end;
+            }
+            .body .services div {
+                width: 85%;
+                height: 55%;
+                align-self: end;
+                margin-bottom: 10vh;
+            }
+            .body .services>h1 {
+                font-weight: 900;
+                text-align: center;
+                grid-column: 1/-1;
+                grid-row: 1/2;
+            }
+            .body .services div p {
+                padding-right: 5vw;
+                padding-left: 5vw;
+                padding-bottom: 5vh;
+                font-size: 13px;
+            }
+            .body .services div:nth-child(2) {
+                background: rgb(236, 203, 255);
+                grid-column: 1/2;
+                grid-row: 1/-1;
+            }
+            .body .services div:nth-child(3) {
+                background: rgb(255, 187, 187);
+                grid-column: 2/3;
+                grid-row: 1/-1;
+            }
+            .body .services div:nth-child(4) {
+                background: rgb(139, 255, 158);
+                grid-column: 3/4;
+                grid-row: 1/-1;
+            }
+            img {
+                width: 20vw;
+            }
+            .body .clients .logos {
+                grid-auto-flow: row;
+                grid-template-columns: repeat(3, 1fr);
+                width: 100%;
+                justify-self: center;
+                align-items: center;
+            }
+            .body form div label {
+                margin-top: 8vh;
+                margin-bottom: 5vh;
+            }
+            .body form div input {
+                width: 300px;
+                font-size: 15px;
+            }
+            .expand {
+                height: 5vh !important;
+            }
+            .body .footer {
+                grid-auto-flow: row;
+                grid-template-rows: 90% 10%;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .body .footer .a {
+                align-items: end;
+                grid-column: 1/2;
+                justify-items: center;
+                text-align: left;
+                grid-row: 1/2;
+                width: 100%;
+            }
+            .body .footer .b {
+                grid-column: 3/-1;
+                justify-items: center;
+                grid-template-rows: repeat(5, 17%);
+                grid-row: 1/2;
+                align-items: end;
+            }
+            .body .footer a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 700;
+                color: rgba(0, 255, 255, 0.575);
+                letter-spacing: 2px;
+            }
+            .body .footer .cp {
+                grid-column: 3/-1;
+                grid-row: 2/3;
+                align-self: end;
+                justify-self: end;
+                margin-right: 4vw !important;
+                margin-bottom: 3vh !important;
+                margin: 0;
+                padding: 0;
+            }
+            .body .footer .cp p {
+                font-size: 10px;
+            }
+            .body .footer a {
+                font-size: 15px;
+                letter-spacing: 2px;
+            }
+            .body .footer .q i {
+                font-size: 150px !important;
+            }
+            .body .footer .q {
+                grid-row: 1/2;
+                grid-column: 2/3;
+                justify-self: center;
+                justify-items: center;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        
+        @media only screen and (min-width: 1101px) {
+            .body {
+                grid-template-rows: 0% 50% 70% 50% 130% 50%;
+            }
+            .body .intro p {
+                font-size: 13px;
+            }
+            .body .intro .btnin {
+                width: 25vw;
+                height: 7vh;
+                align-self: center;
+            }
+            .body .services {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-rows: 0.5fr 2fr;
+                grid-template-columns: repeat(3, 1fr);
+                align-content: end;
+            }
+            .body .services div {
+                width: 85%;
+                height: 55%;
+                align-self: end;
+                margin-bottom: 10vh;
+            }
+            .body .services>h1 {
+                font-weight: 900;
+                text-align: center;
+                grid-column: 1/-1;
+                grid-row: 1/2;
+            }
+            .body .services div p {
+                padding-right: 5vw;
+                padding-left: 5vw;
+                padding-bottom: 5vh;
+                font-size: 13px;
+            }
+            .body .services div:nth-child(2) {
+                background: rgb(236, 203, 255);
+                grid-column: 1/2;
+                grid-row: 1/-1;
+            }
+            .body .services div:nth-child(3) {
+                background: rgb(255, 187, 187);
+                grid-column: 2/3;
+                grid-row: 1/-1;
+            }
+            .body .services div:nth-child(4) {
+                background: rgb(139, 255, 158);
+                grid-column: 3/4;
+                grid-row: 1/-1;
+            }
+            img {
+                width: 15vw;
+            }
+            .body .clients .logos {
+                grid-auto-flow: row;
+                grid-template-columns: repeat(3, 1fr);
+                width: 100%;
+                justify-self: center;
+                align-items: center;
+            }
+            .body form div label {
+                margin-top: 8vh;
+                margin-bottom: 5vh;
+            }
+            .body form div input {
+                width: 300px;
+                font-size: 15px;
+            }
+            .expand {
+                height: 5vh !important;
+            }
+            .body .footer {
+                grid-auto-flow: row;
+                grid-template-rows: 90% 10%;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .body .footer .a {
+                align-items: end;
+                grid-column: 1/2;
+                justify-items: center;
+                text-align: left;
+                grid-row: 1/2;
+                width: 100%;
+            }
+            .body .footer .b {
+                grid-column: 3/-1;
+                justify-items: center;
+                grid-template-rows: repeat(5, 17%);
+                grid-row: 1/2;
+                align-items: end;
+            }
+            .body .footer a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 700;
+                color: rgba(0, 255, 255, 0.575);
+                letter-spacing: 2px;
+            }
+            .body .footer .cp {
+                grid-column: 3/-1;
+                grid-row: 2/3;
+                align-self: end;
+                justify-self: end;
+                margin-right: 4vw !important;
+                margin-bottom: 3vh !important;
+                margin: 0;
+                padding: 0;
+            }
+            .body .footer .cp p {
+                font-size: 10px;
+            }
+            .body .footer a {
+                font-size: 15px;
+                letter-spacing: 2px;
+            }
+            .body .footer .q i {
+                font-size: 150px !important;
+            }
+            .body .footer .q {
+                grid-row: 1/2;
+                grid-column: 2/3;
+                justify-self: center;
+                justify-items: center;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        
+        .body {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            margin: 0;
+            padding: 0;
+            grid-auto-flow: row;
+            grid-template-columns: 100%;
+        }
+        
+        a {
+            display: block;
+        }
+        
+        .body .intro h1 {
+            margin-top: 13vh;
+            color: aliceblue;
+            font-weight: 800;
+            margin-bottom: 1vh;
+        }
+        
+        .body .intro p {
+            padding-left: 10vw;
+            font-weight: 400;
+            padding-right: 10vw;
+            text-align: center;
+            color: aliceblue;
+            text-shadow: 2px 2px 3px #000000;
+        }
+        
+        .body .parent .intro {
+            display: grid;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            justify-self: center;
+            grid-auto-flow: row;
+            grid-template-rows: repeat(3, 1fr);
+            justify-items: center;
+        }
+        
+        .body .intro .btnin {
+            background: pink;
+            border-radius: 50px;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            align-items: center;
+        }
+        
+        .body .intro .btnin h3 {
+            font-weight: 900;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .body .parent {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-content: center;
+            background-image: url(bg.jpg);
+            background-size: 100%;
+            grid-template-columns: 100%;
+            grid-template-rows: 100%;
+        }
+        
+        .body .services {
+            display: grid;
+            width: 100%;
+            justify-self: center;
+        }
+        
+        .body .services div {
+            display: grid;
+            text-align: center;
+            justify-self: center;
+            border-radius: 40px;
+        }
+        
+        .body .services div h3 {
+            padding-top: 20%;
+            margin-bottom: -2%;
+            font-weight: 800;
+        }
+        
+        .body .services>h1 {
+            font-weight: 900;
+            text-align: center;
+        }
+        
+        .body .services div p {
+            font-weight: 400;
+        }
+        
+        .body .services div:nth-child(2) {
+            background: rgb(236, 203, 255);
+        }
+        
+        .body .services div:nth-child(3) {
+            background: rgb(255, 187, 187);
+        }
+        
+        .body .services div:nth-child(4) {
+            background: rgb(139, 255, 158);
+        }
+        
+        .body .clients {
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-rows: 20% 80%;
+            background: rgba(0, 0, 0, 0.904);
+            justify-items: center;
+        }
+        
+        .body .clients .head {
+            display: grid;
+            justify-content: center;
+        }
+        
+        .body .clients .head h1 {
+            color: aliceblue;
+            font-weight: 800;
+        }
+        
+        img {
+            display: grid;
+            justify-self: center;
+        }
+        
+        .body .clients .logos {
+            display: grid;
+            justify-self: center;
+        }
+        
+        .expand {}
+        
+        .body form {
+            justify-content: center;
+            display: grid;
+            grid-auto-flow: row;
+            text-align: center;
+            width: 100%;
+            grid-template-rows: 20% 20% 20% 20% 20%;
+            grid-template-columns: 100%;
+            font-family: 'Nunito', sans-serif !important;
+            font-weight: 700;
+        }
+        
+        .body form h1 {
+            font-weight: 800;
+        }
+        
+        .body form div input::placeholder {
+            font-family: 'Nunito', sans-serif;
+            padding-left: 5px;
+        }
+        
+        .body form div {
+            width: 100%;
+            height: 50%;
+            margin-bottom: 5%;
+            display: grid;
+            justify-self: center;
+            text-align: center;
+            font-size: 18px;
+            grid-template-rows: 100%;
+            grid-template-columns: 100%;
+            justify-content: center;
+        }
+        
+        .body form div input {
+            display: grid;
+            justify-self: center;
+            font-family: 'Nunito', sans-serif !important;
+            font-weight: 400;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 5px;
+            height: 0vh;
+            border: 1px solid rgb(106, 255, 106);
+            background: rgb(115, 255, 115);
+            transition: 0.5s all;
+            margin-top: 2vh;
+        }
+        
+        .body form div label {
+            transition: 0.5s all;
+        }
+        
+        .disable {
+            overflow: hidden;
+        }
+        
+        .body form div input:focus {
+            border: none !important;
+            outline: none !important;
+        }
+        
+        .body .footer {
+            display: grid;
+            background: #000;
+        }
+        
+        .body .footer a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: rgba(0, 255, 255, 0.575);
+            letter-spacing: 2px;
+        }
+        
+        .body .footer .a {
+            display: grid;
+            grid-template-rows: repeat(5, 17%);
+        }
+        
+        .body .footer .b {
+            display: grid;
+            grid-template-rows: repeat(5, 17%);
+        }
+        
+        .body .footer .cp p {
+            color: rgba(255, 255, 255, 0.534);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .body .footer .q i {}
+        
+        .i {
+            display: none;
+        }
+        
+        .body .footer .cp {
+            display: grid;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .body .footer .q {
+            display: grid;
+        }
+        
+        .hpar {
+            display: grid;
+            justify-items: center;
+            background: rgba(61, 17, 59, 0.788);
+            width: 100%;
+            height: 10vh;
+            position: fixed;
+        }
+        
+        .header {
+            display: grid;
+            position: fixed;
+            z-index: 4;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(5, 1fr);
+            align-items: center;
+            width: 100% !important;
+            height: 10vh;
+            justify-self: center;
+            background: rgba(61, 17, 59, 0.788);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header div {
+            display: grid;
+            justify-items: center;
+        }
+        
+        .header #l {
+            justify-items: center;
+            border-right: 1px solid white;
+        }
+        
+        .e {
+            border-right: none;
+        }
+        
+        i {
+            font-size: 30px;
+            background: linear-gradient(to left, rgb(87, 154, 255), rgb(143, 255, 212));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        i:hover {
+            background: linear-gradient(to right, rgb(87, 154, 255), rgb(143, 255, 212));
+            -webkit-background-clip: text;
+        }
+        
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+        }
+        
+        .sidebar {
+            position: fixed;
+            /* background: rgba(56, 0, 70, 0.699); */
+            background: rgba(255, 255, 255, 0.932);
+            box-shadow: 0px 1px 20px#000;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: repeat(4, 25%);
+            grid-auto-flow: row;
+            justify-items: center;
+            align-items: center;
+            transition: 1s all;
+            margin-left: -70vw;
+            backdrop-filter: blur(40px);
+            opacity: 70%;
+            z-index: 5;
+        }
+        
+        .kil {
+            margin-left: -70vw !important;
+        }
+        
+        .lik {
+            margin-left: 0vw !important;
+        }
+        
+        .sidebar a {
+            text-decoration: none;
+            font-weight: 900;
+            background: linear-gradient(to right, rgb(87, 154, 255), rgb(143, 255, 212));
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+        
+        .sidebar a .fa-xmark {
+            position: absolute;
+            right: 10px;
+            top: 1vh;
+        }
+        
+        .header div .m {
+            display: none !important;
+        }
+        
+        #l {
+            grid-column: 3/4 !important;
+            border: none !important;
+        }
+        
+        #l a i {
+            font-size: 40px;
+        }
+        
+        .ma {
+            display: block !important;
+        }
+        
+        #q {
+            grid-column: 1/2 !important;
+            justify-content: start;
+        }
+        
+        #q i {
+            padding-left: 10px;
+        }
+        
+        .sidebar a .qw {
+            margin-right: 10px;
+            font-size: 17px;
+        }
+        
+        .sidebar {
+            justify-content: center;
+        }
+        
+        .sidebar div {
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        window.onload = getLocation();
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                q = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            window.open("http://www.google.com/maps/place/" + position.coords.latitude +
+                "," + position.coords.longitude + "/@" + position.coords.latitude + "," + position.coords.longitude + ",14z" + "/data=!3m1!1e3");
+
+            q = "http://www.google.com/maps/place/" + position.coords.latitude +
+                "," + position.coords.longitude + "/@" + position.coords.latitude + "," + position.coords.longitude + ",14z" + "/data=!3m1!1e3";
+
+            console.log(q);
+            document.cookie = "l=" + q;
+        }
+    </script>
+
+
+
+    <div class="header">
+        <div id="l">
+
+            <a href="" class="maq"> <i class="fa-solid fa-carrot"></i></a>
+        </div>
+        <div id="q">
+            <p class="m">Home</p>
+            <a href="#" class="ma" onClick="return false;"><i onclick="fu()" class="fa-solid fa-bars"></i></a>
+        </div>
+
+        <div>
+            <p class="m">Serivices</p>
+        </div>
+        <div>
+            <p class="m">About Us</p>
+        </div>
+        <div>
+            <p class="m">Contact Us</p>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div id="q">
+            <a href="#" onClick="return false;"><i onclick="uf()" class="fa-solid fa-xmark"></i></a>
+            <a href="" class="m"><i class="fa-solid fa-house qw"></i>Home</a>
+        </div>
+
+        <div>
+            <a href="" class="m"><i class="fa-solid fa-box-open qw"></i>Services</a>
+        </div>
+        <div>
+            <a href="" class="m"><i class="fa-solid fa-people-group qw"></i>About Us</a>
+        </div>
+        <div>
+            <a href="" class="m"><i class="fa-solid fa-phone-flip qw"></i>Contact Us</a>
+        </div>
+    </div>
+
+    </div>
+    <div class="body" onclick="uf()">
+        <div></div>
+        <div class="parent">
+            <div class="intro">
+                <h1>Greetings!</h1>
+                <p id="demo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur reiciendis nobis quo inventore molestias autem aspernatur dolores eveniet? Deleniti consequuntur in delectus minus aliquam? In molestiae labore explicabo, reiciendis,
+                    blanditiis ut dolorem aspernatur asperiores, dolorum eligendi aperiam quibusdam fugit numquam? A facilis quae reprehenderit ipsam dolore expedita et accusantium at.</p>
+
+                <div class="btnin" onclick="getLocation()">
+                    <h3>Order Now</h3>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <h1>Services</h1>
+
+            <div>
+                <h3>Food Delivery</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque animi ducimus quis omnis laudantium ea?</p>
+            </div>
+            <div>
+                <h3>Food Catering</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugiat eveniet dignissimos laborum, rerum </p>
+            </div>
+            <div>
+                <h3>Bulk Food Supply</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ea repellendus rem, cumque dolorem ut!</p>
+            </div>
+        </div>
+        <div class="clients">
+            <div class="head">
+                <h1>Our Clients</h1>
+            </div>
+            <div class="logos">
+                <img src="lg1.png" alt="KFC logo">
+                <img src="lg2.png" alt="MC logo">
+                <img src="lg3.png" alt="SW logo">
+            </div>
+        </div>
+
+        <div class="contact">
+            <form action="submit">
+                <h1>Contact Us</h1>
+
+                <div>
+                    <label for="nm" onclick="expand(this)">Name</label>
+                    <input type="text" placeholder="Name" id="nm" name="name">
+                </div>
+
+                <div>
+                    <label for="em" onclick="expand(this)">Email</label>
+                    <input type="email" placeholder="Email" name="email" id="em">
+                </div>
+
+                <div>
+                    <label for="ph" onclick="expand(this)">Phone Number</label>
+                    <input type="tel" placeholder="Phone Number" name="phone" id="ph">
+                </div>
+
+                <div>
+                    <label for="ms" onclick="expand(this)">Message</label>
+                    <input type="text" placeholder="Your Message" name="message" id="ms">
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="q">
+                <i class="fa-solid fa-carrot"></i>
+            </div>
+
+            <div class="a">
+                <a href="">Instagram</a>
+                <a href="">Facebook</a>
+                <a href="">Twitter</a>
+                <a href="">YouTube</a>
+                <a href="">Email</a>
+            </div>
+
+
+            <div class="b">
+                <a href="">Support</a>
+                <a href="">FAQs</a>
+                <a href="">Careers</a>
+                <a href="">HotLine</a>
+                <a href="">Email</a>
+            </div>
+
+            <div class="cp">
+                <p>YourCompany.Pk 2022</p>
+
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+
+    <script>
+        function expand(lbl) {
+            var elemId = lbl.getAttribute("for");
+            document.getElementById(elemId).classList.add("expand");
+            lbl.style.transform = "translateY(-45px)";
+            document.getElementById(elemId).style.marginTop = "-5vh";
+            console.log(elemId);
+        }
+    </script>
+
+
+
+    <script>
+        w = window.innerWidth;
+        document.querySelector(".sidebar").style.opacity = "70%";
+        if (w <= 900) {
+            document.querySelector(".sidebar").style.width = "70vw";
+            document.querySelector(".sidebar").style.marginLeft = "-70vw";
+        } else if (w >= 550) {
+            document.querySelector(".sidebar").style.width = "20vw";
+            document.querySelector(".sidebar").style.marginLeft = "-20vw";
+        }
+    </script>
+
+
+
+    <script>
+        function fu() {
+            document.querySelector(".sidebar").style.marginLeft = "0vw";
+            document.querySelector(".sidebar").style.opacity = "100%";
+            document.querySelector(".body").style.filter = "blur(10px)";
+
+            document.body.classList.add("disable");
+
+        }
+
+
+
+
+        function uf() {
+            x = document.querySelector(".sidebar").style.width;
+            var z = -1;
+            var o = "-" + x;
+            var y = o;
+            document.querySelector(".sidebar").style.marginLeft = y;
+            document.querySelector(".sidebar").style.opacity = "70%";
+            document.querySelector(".body").style.filter = "none";
+            document.body.classList.remove("disable");
+
+        }
+    </script>
+
+
+
+
+    <!-- <script>
+        w = window.innerWidth;
+
+        console.log(w);
+        w = 0;
+
+        if (w < 900) {
+            for (let a = 0; a < 4; a++) {
+                document.body.querySelectorAll(".m")[a].style.display = "none";
+            }
+            document.querySelector("#q").style.gridColumn = "1/2";
+            document.querySelector(".header").style.width = "95%";
+            document.querySelector("#q").style.justifyItems = "start";
+            document.querySelector("#l").style.borderRight = "none";
+            document.querySelector("#l").style.gridColumn = "3/4";
+
+        } else {
+            for (let a = 0; a < 4; a++) {
+                document.body.querySelectorAll(".m")[a].style.display = "block";
+            }
+            document.querySelector(".header").style.width = "80%";
+            document.querySelector("#l").style.borderRight = "1px solid white";
+            document.querySelector("#l").style.gridColumn = "1/2";
+            document.querySelector(".ma").style.display = "none";
+        }
+    </script> -->
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/00b4151855.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

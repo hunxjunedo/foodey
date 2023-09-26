@@ -1,0 +1,12 @@
+HEADER transparent>
+logo home services about contactUs
+SECTION 1>
+with image background, contains a short intro with heading, has a button of order now.
+SECTION 2>
+with heading of our services, has 3 cards of catering, food delivery, and bulk food supply with images in all cards and short descriptions.
+SECTION 3> 
+our clients, add logos of some general relevant companies.
+CONTACT US>
+a form with fields of name, email, phone number, and message.
+FOOTER>
+customized with headings of Quick Links and copyright.
